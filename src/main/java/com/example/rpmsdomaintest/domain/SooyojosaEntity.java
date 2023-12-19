@@ -11,6 +11,8 @@ import static jakarta.persistence.FetchType.LAZY;
 @Entity
 public class SooyojosaEntity {
 
+    //test
+
     @Id
     @GeneratedValue
     @Column(name = "sooyojosa_id")
