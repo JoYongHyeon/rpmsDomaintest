@@ -47,7 +47,7 @@ public class Resource {
 
     //삭제여부
     @Column(name = "DEL_YN")
-    private boolean delAt;
+    private boolean delYn;
 
     //생성일자
     @Column(name = "REG_DT")

@@ -1,7 +1,7 @@
 package com.example.rpmsdomaintest.domain.demand;
 
-import com.example.rpmsdomaintest.domain.PartDesignResource;
-import com.example.rpmsdomaintest.domain.UnityBiz;
+import com.example.rpmsdomaintest.domain.part.PartDesignResource;
+import com.example.rpmsdomaintest.domain.unity.UnityBusiness;
 import com.example.rpmsdomaintest.domain.demand.resource.DemandInvestigationResource;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
@@ -85,7 +85,7 @@ public class DemandInvestigation {
     // 통합사업
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name = "UNITY_BIZ_ID")
-    private UnityBiz unityBiz;
+    private UnityBusiness unityBusiness;
 
 
     // 부분설계

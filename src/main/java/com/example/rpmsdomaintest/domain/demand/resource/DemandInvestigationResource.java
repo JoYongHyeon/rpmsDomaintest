@@ -73,13 +73,13 @@ public class DemandInvestigationResource {
 
     //삭제여부
     @Column(name = "DEL_YN")
-    private boolean delAt;
+    private boolean delYn;
 
     //비고
     @Column(name = "RMRK")
     private String remarks;
 
-    // 수요조사 자원
+    // 수요조사
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name = "DMAND_INVS_ID")
     private DemandInvestigation demandInvestigation;

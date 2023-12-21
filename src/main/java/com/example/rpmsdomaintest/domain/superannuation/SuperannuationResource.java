@@ -1,4 +1,4 @@
-package com.example.rpmsdomaintest.domain;
+package com.example.rpmsdomaintest.domain.superannuation;
 
 import com.example.rpmsdomaintest.domain.demand.DemandInvestigation;
 import jakarta.persistence.*;
