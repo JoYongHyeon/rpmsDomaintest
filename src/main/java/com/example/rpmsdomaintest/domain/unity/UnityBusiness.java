@@ -55,6 +55,6 @@ public class UnityBusiness {
     private String modifiedUser;
 
     //  수요조사 매핑
-    @OneToMany(mappedBy = "unityBiz")
+    @OneToMany(mappedBy = "unityBusiness")
     private List<DemandInvestigation> demandInvestigations = new ArrayList<>();
 }
