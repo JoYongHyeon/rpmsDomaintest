@@ -8,36 +8,40 @@ import jakarta.persistence.Table;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
+
 @Entity
-@Table(name = "RESRCE_SERVER")
-@DiscriminatorValue("A")
+@Table(name = "RESRCE_STORAGE")
+@DiscriminatorValue("E")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class Server extends Resource {
+public class ResourceStorage extends Resource {
 
-    //서버용도
-    @Column(name = "SRVR_PRPS")
-    private String serverPurpose;
+    //장비구분
+    @Column(name = "EQPMN_DIV")
+    private String equipmentDiv;
 
-    //OS
-    @Column(name = "OS")
-    private String osType;
+    //기술기준
+    @Column(name = "TCHNLGY_STDR")
+    private String technologyStandard;
 
-    //필요용량 - CPU
-    @Column(name = "RQRD_CPU")
-    private int requiredCpu;
+    //연결방식
+    @Column(name = "LNKG_MTHD")
+    private String linkageMethod;
 
-    //필요용량 - 메모리
-    @Column(name = "RQRD_MEM")
-    private int requiredMemory;
+    //RAID type
+    @Column(name = "RAID_TY")
+    private String raidType;
 
-    //필요용량 - 디스크
-    @Column(name = "RQRD_DISK")
-    private int requiredDisk;
+    //인터페이스
+    @Column(name = "INTRFC")
+    private String storageInterface;
 
-    //필요용량 - GPU
-    @Column(name = "RQRD_GPU")
-    private int requiredGpu;
+    //필요용량
+    @Column(name = "RQRD_CPTCY")
+    private int requiredCapacity;
 
+    //복제유무
+    @Column(name = "REPRODC_YN")
+    private boolean reproduceYn;
 
     //상면_전산실
     @Column(name = "CMPT_ROOM")
@@ -55,11 +59,9 @@ public class Server extends Resource {
     @Column(name = "AREA_DIV")
     private String areaDiv;
 
-
-    //망 연계 적용 여부
-    @Column(name = "NET_LINK_YN")
-    private boolean networkLinkYn;
-
+    //스토리지 형태
+    @Column(name = "STORAGE_STLE")
+    private String storageStyle;
 
     //네트워크_구성ID;
     @Column(name = "NET_COMPOSITION_ID")

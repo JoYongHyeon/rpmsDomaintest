@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "RESRCE_NTWRK")
 @DiscriminatorValue("G")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class Network extends Resource {
+public class ResourceNetwork extends Resource {
 
     //장비구분
     @Column(name = "EQPMN_DIV")

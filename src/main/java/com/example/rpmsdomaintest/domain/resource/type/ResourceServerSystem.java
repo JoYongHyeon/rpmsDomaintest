@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "RESRCE_SERVER_SYSTEM")
 @DiscriminatorValue("D")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class ServerSystem extends Resource {
+public class ResourceServerSystem extends Resource {
 
     //서버용도
     @Column(name = "SRVR_USG")

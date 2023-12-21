@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "RESRCE_SERVER_BACKUP")
 @DiscriminatorValue("C")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class ServerBackup extends Resource {
+public class ResourceServerBackup extends Resource {
 
     //백업 방식
     @Column(name = "MTHD")

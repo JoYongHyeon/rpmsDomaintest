@@ -9,12 +9,12 @@ import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "RESRCE_BACKUP")
-@DiscriminatorValue("F")
+@Table(name = "RESRCE_SECURITY_EQPMNT")
+@DiscriminatorValue("H")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class Backup extends Resource {
+public class ResourceSecurityEquipment extends Resource {
 
-    //장비 구분
+    //장비구분
     @Column(name = "EQPMN_DIV")
     private String equipmentDiv;
 
@@ -22,14 +22,18 @@ public class Backup extends Resource {
     @Column(name = "TCHNLGY_STDR")
     private String technologyStandard;
 
-    //백업방식
-    @Column(name = "BACKUP_MTHD")
-    private String backupMethod;
+    //처리 성능
+    @Column(name = "PRCS_PRFOMNC")
+    private String processPerformance;
 
+    //포트 타입
+    @Column(name = "PORT_TY")
+    private String portType;
 
-    //백업용량
-    @Column(name = "BACKUP_CPCTY")
-    private int backupCapacity;
+    //포트 수량
+    @Column(name = "PORT_CO")
+    private int portCount;
+
 
     //상면_전산실
     @Column(name = "CMPT_ROOM")
@@ -39,6 +43,7 @@ public class Backup extends Resource {
     @Column(name = "INSTL_CRDNT")
     private String installationCoordinate;
 
+
     //망 구분
     @Column(name = "NET_DIV")
     private String networkDiv;
@@ -47,7 +52,16 @@ public class Backup extends Resource {
     @Column(name = "AREA_DIV")
     private String areaDiv;
 
-    //백업형태
-    @Column(name = "BACKUP_STLE")
-    private String backupStyle;
+
+    //HW 성능 - CPU
+    @Column(name = "CPU")
+    private int cpuPerformance;
+
+    //HW 성능 - 메모리
+    @Column(name = "MEM")
+    private int memoryPerformance;
+
+    //HW 성능 - 디스크
+    @Column(name = "DISK")
+    private int diskPerformance;
 }
