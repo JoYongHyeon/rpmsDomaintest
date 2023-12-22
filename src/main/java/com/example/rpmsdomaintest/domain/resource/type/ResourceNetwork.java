@@ -13,7 +13,6 @@ import lombok.NoArgsConstructor;
 @DiscriminatorValue("G")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class ResourceNetwork extends Resource {
-
     //장비구분
     @Column(name = "EQPMN_DIV")
     private String equipmentDiv;
@@ -29,19 +28,19 @@ public class ResourceNetwork extends Resource {
 
 
     //10G 포트수
-    @Column(name = "10G_PORT_CO")
+    @Column(name = "PORT_CO_10G")
     private int portCount10G;
 
     //1G 포트수
-    @Column(name = "1G_PORT_CO")
+    @Column(name = "PORT_CO_1G")
     private int portCount1G;
 
     //UTP 포트수
-    @Column(name = "UTP_PORT_CO")
+    @Column(name = "PORT_CO_UTP")
     private int portCountUTP;
 
     //기타 포트수
-    @Column(name = "ETC_PORT_CO")
+    @Column(name = "PORT_CO_ETC")
     private int portCountETC;
 
     //상면_전산실

@@ -28,9 +28,12 @@ public class PartDesignResource {
     @Column(name = "VER")
     private String version;
 
+    //삭제여부
     @Column(name = "DEL_YN")
     private String delYn;
 
+
+    //수정요청 여부
     @Column(name = "MDFCN_RQST_YN")
     private String modificationRequestYn;
 

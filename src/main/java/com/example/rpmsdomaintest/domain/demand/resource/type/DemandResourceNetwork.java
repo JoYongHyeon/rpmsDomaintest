@@ -1,10 +1,8 @@
 package com.example.rpmsdomaintest.domain.demand.resource.type;
 
+import com.example.rpmsdomaintest.domain.common.NetworkIsolation;
 import com.example.rpmsdomaintest.domain.demand.resource.DemandInvestigationResource;
-import jakarta.persistence.Column;
-import jakarta.persistence.DiscriminatorValue;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
@@ -29,19 +27,19 @@ public class DemandResourceNetwork extends DemandInvestigationResource {
 
 
     //10G 포트수
-    @Column(name = "10G_PORT_CO")
+    @Column(name = "PORT_CO_10G")
     private int portCount10G;
 
     //1G 포트수
-    @Column(name = "1G_PORT_CO")
+    @Column(name = "PORT_CO_1G")
     private int portCount1G;
 
     //UTP 포트수
-    @Column(name = "UTP_PORT_CO")
+    @Column(name = "PORT_CO_UTP")
     private int portCountUTP;
 
     //기타 포트수
-    @Column(name = "ETC_PORT_CO")
+    @Column(name = "PORT_CO_ETC")
     private String portCountETC;
 
     //상면_전산실
@@ -54,7 +52,8 @@ public class DemandResourceNetwork extends DemandInvestigationResource {
 
     //망 구분
     @Column(name = "NET_DIV")
-    private String networkDiv;
+    @Enumerated(value = EnumType.STRING)
+    private NetworkIsolation networkDiv;
 
     //영역구분
     @Column(name = "AREA_DIV")
